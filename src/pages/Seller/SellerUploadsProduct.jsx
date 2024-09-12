@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
-import useUpload from '../../Hooks/useUpload';
+import useUpload from '../../Hooks/UseUpload';
 import axios from "axios"
 import { useSelector } from 'react-redux';
 import { Spinner } from '@material-tailwind/react';
