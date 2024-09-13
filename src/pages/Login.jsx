@@ -39,10 +39,10 @@ const LoginSignupPage = () => {
                         if (isLogin) {
                                     try {
                                                 const { data } = await axios.post(import.meta.env.VITE_API_URL + "/login", { email, password });
-                                                console.log(data)
+
                                                 dispatch(login(data))
                                                 setLoader(false)
-                                                console.log(data.role)
+
                                                 if (data.success) {
                                                             toast.success(data.message)
 
