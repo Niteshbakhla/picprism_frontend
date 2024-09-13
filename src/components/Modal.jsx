@@ -85,14 +85,16 @@ const Modal = ({ image, price, title, author, modal, setModal, postId }) => {
                                                 }
                                     );
 
-                                    // return console.log(data.posts.purchaseBy)
+
 
                                     const { error } = await stripe.redirectToCheckout({ sessionId: data.id });
                                     if (error) {
                                                 console.error('Stripe Checkout error:', error);
                                     }
                         } catch (error) {
+                                    toast.error(error.response.data.message)
                                     console.log(error.message)
+                                    console.log(error);
                         }
             }
 
